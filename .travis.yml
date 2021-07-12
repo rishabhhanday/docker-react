@@ -1,3 +1,4 @@
+language: generic 
 sudo: required
 services:
   - docker
@@ -5,4 +6,4 @@ services:
 before_install:
   - docker build -t rishabh1504/react-docker -f Dockerfile.dev .
 script:
-  - docker run rishabh1504/react-docker npm run test -- --coverage
+  - docker run -e CI=true rishabh1504/react-docker npm run test 
