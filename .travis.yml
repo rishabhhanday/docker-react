@@ -10,10 +10,10 @@ script:
 
 deploy:
   provider: elasticbeanstalk
-  access_key_id: "$AWS_ACCESS_KEY"
-  secret_access_key: "$AWS_SECRET_KEY"
+  access_key_id: "$AWS_ACCESS_KEY_ID"
+  secret_access_key: "$AWS_SECRET_ACCESS_KEY"
   bucket_name: "elasticbeanstalk-us-east-2-604328512524"
-  region: "eu-east-2"
+  region: "us-east-2"
   app: "docker-poc"
   env: "Dockerpoc-env"
   bucket_path: "docker-poc"
